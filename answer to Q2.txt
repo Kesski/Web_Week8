@@ -1,0 +1,4 @@
+#2. You would see this warning when you've put code in the id='app' section but you didn't 
+link it in the script part of the code. It's not doing anything if you don't put the 
+code in both spots. For example, you would have to put 'total' in both the id='app' and in 
+the script section. 
