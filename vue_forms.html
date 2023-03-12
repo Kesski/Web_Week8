@@ -16,12 +16,12 @@
         <label for="name">Please enter your name: </label>
         <input v-model="name" id="name">
 
-        <p v-if="name.length > 2">
+        <p v-if="name.length > 2"> <!-- if what is typed in is more than 2 letters, add the following text -->
             Your name is {{ name }}
             <button v-on:click="clear">Clear Input</button>
         </p>
-        <p v-else>
-            Waiting for user input
+        <p v-else> <!-- if what is typed in is less than 2 letters, the following text will be displayed -->
+            Waiting for user input 
         </p>
         
     </div>
@@ -41,7 +41,7 @@
             }
         })
 
-        app.mount('#app')
+        app.mount('#app') // this is needed to link the html to the script
         
     </script>
 

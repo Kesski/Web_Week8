@@ -17,7 +17,7 @@
 
         <label for="task">Please enter your to do task:</label>
         <input id="task" v-model="newTask">
-        <button v-on:click="addTask">Add Task</button>
+        <button v-on:click="addTask">Add Task</button> <!-- create button trigger -->  
 
        <ul>
             <li v-for="task in taskList">{{ task }}</li>
@@ -33,7 +33,7 @@
                 }
             },
             methods: {
-                addTask() {
+                addTask() { // will add the li element from the addTask button
                     this.taskList.push(this.newTask)
                     this.newTask = ''
                 }
@@ -41,7 +41,7 @@
             }
         })
 
-        app.mount('#app')
+        app.mount('#app') // this is needed to link the html to the script
       
         
     </script>

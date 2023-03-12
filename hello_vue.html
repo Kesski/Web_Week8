@@ -15,8 +15,8 @@
         <h1>Hello Vue.</h1>
         <p>Original Message: {{ message }}</p>
         <p>Added Exclamation Points: {{ messageWithExclamationPoints }}</p>
-        <button v-on:click="addExclamation">Add !</button>
-        <button v-on:click="clear">Clear</button>
+        <button v-on:click="addExclamation">Add !</button> <!-- create button trigger -->  
+        <button v-on:click="clear">Clear</button> <!-- create button trigger -->  
     </div>
 
     <script>
@@ -30,11 +30,11 @@
                 }
             },
             methods: {
-                addExclamation() {
+                addExclamation() {  // when the button is clicked, it will trigger an exclamation to be added
                     if (this.exclamationPoints < this.maxExclamationPoints) {
                         this.exclamationPoints++
                     } else {
-                        alert('Cannot add more exclamation points')
+                        alert('Cannot add more exclamation points') // once it hits 10 exclamation points, it will not add anymore
                     }
                 },
                 clear() {
@@ -42,7 +42,7 @@
                 }
             },
             computed: {
-                messageWithExclamationPoints() {
+                messageWithExclamationPoints() { // this creates an exclamation to be added
                     let messageWithPoints = this.message
                     for (let x = 0; x < this.exclamationPoints; x++) {
                         messageWithPoints = messageWithPoints + '!'
@@ -52,7 +52,7 @@
             }
         })
 
-        app.mount('#app')
+        app.mount('#app') // this is needed to link the html to the script
 
     </script>
 
